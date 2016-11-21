@@ -30,9 +30,14 @@ public class Putadon {
 		
 		//Buscamos las letras
 		for(int i=0;i<frase.length();i++){
-			if(letra==frase.charAt(i-1)){
-				numRepeticiones=numRepeticiones;
-				System.out.println("Letra "+letra+" encontrada en la posicion "+i);
+			if(letra==frase.charAt(numPos)){
+				
+				numRepeticiones++;
+				System.out.println("Letra "+letra+" encontrada en la posicion "+numPos); //No tiene que poner la posicion i, si no la variable posicion
+				numPos++;
+			}else{
+				numPos++;
+				
 			}
 		}
 		System.out.println("Total repeticiones "+numRepeticiones);
